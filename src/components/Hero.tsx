@@ -27,7 +27,7 @@ export function Hero() {
       <div className="wrap in">
         <h1 id="hero-title">
           <span>
-            <i>Precisão mecânica.</i>
+            <i>Mecânica Automotiva.</i>
           </span>
           <b>
             <span>

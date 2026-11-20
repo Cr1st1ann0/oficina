@@ -53,7 +53,12 @@ export function Location() {
             </div>
             <div>
               <dt>E-mail</dt>
-              <dd>{company.email}</dd>
+              <dd>
+                <a className="lk" href={`mailto:${company.email}`} aria-label={`Enviar e-mail para ${company.email}`}>
+                  {company.email}
+                  <ArrowUpRightIcon />
+                </a>
+              </dd>
             </div>
             <div>
               <dt>Instagram</dt>
