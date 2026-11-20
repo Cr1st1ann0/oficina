@@ -1,6 +1,10 @@
+/** Itens do menu. O `id` precisa ser o mesmo `id` da seção correspondente na página. */
 export const navigation = [
-  { href: '#especialidades', label: 'Serviços' },
-  { href: '#sobre', label: 'Sobre' },
-  { href: '#diferenciais', label: 'Diferenciais' },
-  { href: '#contato', label: 'Contato' },
+  { id: 'servicos', label: 'Serviços' },
+  { id: 'sobre', label: 'Sobre' },
+  { id: 'atendimento', label: 'Atendimento' },
+  { id: 'diferenciais', label: 'Diferenciais' },
+  { id: 'contato', label: 'Contato' },
 ] as const;
+
+export type NavId = (typeof navigation)[number]['id'];

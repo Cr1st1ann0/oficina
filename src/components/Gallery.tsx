@@ -48,14 +48,14 @@ export function Gallery() {
   const current = index !== null ? gallery[index] : null;
 
   return (
-    <section id="galeria" className="section gallery" aria-labelledby="gallery-title">
-      <div className="container">
-        <header className="gallery__head" data-reveal>
+    <section id="galeria" className="sec gallery" aria-labelledby="gallery-title">
+      <div className="wrap">
+        <div className="gallery__head" data-reveal>
           <p className="eyebrow">Galeria</p>
           <h2 id="gallery-title" className="h2">
             Por dentro da <em>oficina.</em>
           </h2>
-        </header>
+        </div>
 
         <ul className="gallery__grid">
           {gallery.map((item, i) => (

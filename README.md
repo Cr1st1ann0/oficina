@@ -26,7 +26,7 @@ npm run preview    # serve o build de produção em http://localhost:4173
 | Itens do menu | `src/data/navigation.ts` |
 | Galeria de fotos reais | `src/data/gallery.ts` |
 | Depoimentos reais | `src/data/testimonials.ts` |
-| Cores, fontes e espaçamentos | `src/styles/variables.css` |
+| Cores, fontes, espaçamentos e animações | `src/styles/site.css` (começa pelo bloco `:root`) |
 
 Os dados comerciais ficam **apenas** em `company.ts`. Header, rodapé, contato, links do WhatsApp e dados estruturados (Schema.org) leem todos desse arquivo.
 
@@ -69,7 +69,7 @@ src/
   components/           uma seção por componente (+ CSS próprio)
   data/                 company.ts, services.ts, navigation.ts, gallery.ts, testimonials.ts
   lib/                  whatsapp.ts (links wa.me), style.ts
-  styles/               variables.css (paleta e tipografia), global.css
+  styles/               site.css (design: paleta, tipografia, layout e animações), global.css (acessibilidade), variables.css (aliases das seções opcionais)
 vite.config.ts          base relativa + plugin de SEO (JSON-LD, canonical, sitemap, robots)
 .github/workflows/      deploy automático no GitHub Pages
 ```
@@ -82,14 +82,29 @@ Se existir uma versão vetorial (SVG/PDF) ou um PNG transparente em alta resolu�
 
 ## Imagens
 
-As fotos atuais são **imagens ilustrativas do Unsplash** (licença livre) e trazem a legenda "Imagem ilustrativa". **Não são fotos da oficina.** Assim que houver fotos reais, troque os arquivos `hero-*`, `about-*`, `tools-*`, `business-*` e `cta-*` em `src/assets/images/` (mantendo os nomes, ou atualizando os imports) e remova as legendas e o crédito no rodapé.
+As fotos atuais são **imagens ilustrativas do Unsplash** (licença livre) e trazem a legenda "Imagem ilustrativa" no topo, com crédito no rodapé. **Não são fotos da oficina nem identificam modelos de carro.** Assim que houver fotos reais, troque os arquivos de `src/assets/images/` mantendo os nomes (ou ajuste os imports):
 
-Para converter uma foto (ImageMagick):
+| Arquivo | Onde aparece |
+| --- | --- |
+| `hero-1600` / `hero-800` | Topo da página |
+| `servico-mecanica`, `servico-diagnostico`, `servico-injecao`, `servico-preventiva` | Cartões das quatro especialidades |
+| `sobre-1800` / `sobre-900` | Seção "Sobre" (tela cheia) |
+| `atendimento-particular`, `atendimento-empresarial` | Seção "Atendimento" |
+
+Cada foto existe em AVIF e WebP. Para converter uma foto (ImageMagick):
 
 ```bash
-magick foto.jpg -resize 1920x -quality 72 hero-1920.webp
-magick foto.jpg -resize 1920x -quality 55 hero-1920.avif
+magick foto.jpg -resize 1600x -quality 80 hero-1600.webp
+magick foto.jpg -resize 1600x -quality 52 hero-1600.avif
 ```
+
+## Design
+
+A paleta e as transições seguem as do site da Porsche Brasil, lidas diretamente dele: fundo `#010205`, texto `#FAFBFF`, texto secundário `rgba(246,246,248,.67)`, botões translúcidos `rgba(156,156,159,.3)`; transições de 0,25 s (cor) e 0,4 s (movimento) em `cubic-bezier(.25,.1,.25,1)`, e entrada do título em 1,2 s subindo 40 px. Não há amarelo na interface: a única cor é o dourado da própria logo.
+
+As fontes são gratuitas e ficam embutidas no site (nada é carregado de fora): **Barlow** nos textos, parecida com a Porsche Next, e **Michroma** no nome GARAGE, parecida com o logotipo da Porsche. As fontes originais da Porsche são licenciadas e não são usadas.
+
+O menu acompanha a rolagem e destaca o item da seção em que a tela está. Cada item aponta para o `id` da seção; os ids ficam em `src/data/navigation.ts`.
 
 ## Pendências do conteúdo
 
@@ -102,5 +117,5 @@ magick foto.jpg -resize 1920x -quality 55 hero-1920.avif
 
 - HTML semântico, um único `h1`, link "Pular para o conteúdo", foco visível, menu mobile com `aria-expanded`, Esc e foco preso.
 - `prefers-reduced-motion` desativa as animações.
-- Imagens em AVIF/WebP com `srcset`, `width`/`height` e `loading="lazy"` (exceto o Hero). Fontes self-hosted (Sora e Inter variáveis).
+- Imagens em AVIF/WebP com `srcset`, `width`/`height` e `loading="lazy"` (exceto o Hero). Fontes self-hosted (Barlow e Michroma).
 - Schema.org `AutoRepair` com endereço, telefone, horários, serviços e Instagram, sem avaliações inventadas.

@@ -7,3 +7,4 @@ dist-sub
 !.vscode/extensions.json
 .idea
 *.log
+previa

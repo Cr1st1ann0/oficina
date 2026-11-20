@@ -10,14 +10,14 @@ export function Testimonials() {
   if (testimonials.length === 0) return null;
 
   return (
-    <section id="depoimentos" className="section section--graphite testimonials" aria-labelledby="testimonials-title">
-      <div className="container">
-        <header className="testimonials__head" data-reveal>
+    <section id="depoimentos" className="sec testimonials" aria-labelledby="testimonials-title">
+      <div className="wrap">
+        <div className="testimonials__head" data-reveal>
           <p className="eyebrow">Depoimentos</p>
           <h2 id="testimonials-title" className="h2">
             Quem confia, <em>recomenda.</em>
           </h2>
-        </header>
+        </div>
 
         <ul className="testimonials__list">
           {testimonials.map((t) => (

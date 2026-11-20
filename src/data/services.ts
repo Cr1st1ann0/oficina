@@ -18,7 +18,7 @@ export const services: Service[] = [
     id: 'mecanica-geral',
     title: 'Mecânica geral',
     description:
-      'Avaliação e reparo dos sistemas mecânicos do veículo, com atenção a cada componente e orientação clara sobre o que precisa ser feito.',
+      'Avaliação e reparo dos sistemas mecânicos, com orientação clara sobre o que precisa ser feito.',
     icon: 'wrench',
     message: 'general',
     enabled: true,
@@ -27,7 +27,7 @@ export const services: Service[] = [
     id: 'diagnostico-eletronico',
     title: 'Diagnóstico eletrônico',
     description:
-      'Leitura e interpretação de falhas com equipamento de diagnóstico, para identificar a origem do problema antes de qualquer intervenção.',
+      'Leitura e interpretação de falhas com equipamento de diagnóstico, para achar a origem do problema.',
     icon: 'scan',
     message: 'diagnostic',
     enabled: true,
@@ -36,7 +36,7 @@ export const services: Service[] = [
     id: 'injecao-eletronica',
     title: 'Injeção eletrônica',
     description:
-      'Análise e manutenção do sistema de injeção de veículos flex, em busca de funcionamento estável, bom desempenho e consumo adequado.',
+      'Análise e manutenção do sistema de injeção de veículos flex, em busca de desempenho e consumo adequados.',
     icon: 'fuel',
     message: 'diagnostic',
     enabled: true,
@@ -45,7 +45,7 @@ export const services: Service[] = [
     id: 'manutencao-preventiva',
     title: 'Manutenção preventiva',
     description:
-      'Revisões e verificações periódicas que ajudam a evitar falhas inesperadas e a preservar a vida útil do veículo.',
+      'Revisões e verificações periódicas que ajudam a evitar falhas inesperadas e preservar o veículo.',
     icon: 'calendar',
     message: 'maintenance',
     enabled: true,
