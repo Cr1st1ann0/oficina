@@ -72,8 +72,8 @@ export function Location() {
             <div>
               <dt>Google</dt>
               <dd>
-                <a className="lk" href={company.googleReviewsUrl} target="_blank" rel="noopener noreferrer" aria-label={`Abrir a página da ${company.name} no Google`}>
-                  Nossa página no Google
+                <a className="lk" href={company.googleReviewsUrl} target="_blank" rel="noopener noreferrer" aria-label={`Abrir o perfil da ${company.name} no Google`}>
+                  Perfil no Google
                   <ArrowUpRightIcon />
                 </a>
               </dd>
