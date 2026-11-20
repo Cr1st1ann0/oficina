@@ -24,7 +24,7 @@ header.solid .nv{height:32px;margin-top:-6px}
 .soc a svg{width:21px;height:21px}
 .soc a:hover,.soc a:focus-visible{opacity:1;transform:scale(1.1)}
 .brand img{width:58px;height:58px;filter:drop-shadow(0 4px 18px rgba(245,197,24,.25))}
-.brand b{font-family:'Michroma','Barlow',sans-serif;font-weight:700;font-size:17px;letter-spacing:.34em;margin-right:-.34em}
+.brand b{font-family:'Michroma','Barlow',sans-serif;font-weight:700;font-size:25px;letter-spacing:.3em;margin-right:-.3em}
 .brand small{display:block;font-size:9.5px;letter-spacing:.3em;color:rgba(250,251,255,.55);font-weight:400;margin-top:2px;text-transform:uppercase}
 nav{display:flex;gap:36px;font-size:14px;font-weight:400}
 nav a{opacity:.78;transition:opacity .25s var(--ease);position:relative;padding:6px 0}
@@ -122,7 +122,7 @@ nav a:hover:after{transform:scaleX(1)}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) hue-rotate(180deg)}
 footer{border-top:1px solid var(--line);padding:56px 0 44px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:13px;color:rgba(250,251,255,.5)}
-footer .brand{margin:0}footer .brand img{width:44px;height:44px;filter:none}footer .brand b{font-size:13px;color:#FAFBFF}
+footer .brand{margin:0}footer .brand img{width:44px;height:44px;filter:none}footer .brand b{font-size:17px;color:#FAFBFF}
 .wa{position:fixed;right:22px;bottom:22px;z-index:50;width:58px;height:58px;border-radius:50%;background:var(--yellow);color:var(--black);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
 .wa svg{width:28px;height:28px}
 .js .rv{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.25,.1,.25,1),transform 1s cubic-bezier(.25,.1,.25,1)}
@@ -130,7 +130,7 @@ footer .brand{margin:0}footer .brand img{width:44px;height:44px;filter:none}foot
 @media(prefers-reduced-motion:reduce){.cta .em,.hero img.bg{animation:none}.js .rv{opacity:1;transform:none}}
 @media(max-width:1000px){
  .wrap{padding:0 22px}
- .hd{height:76px}.brand img{width:46px;height:46px}.brand small{display:none}.brand b{font-size:14px}
+ .hd{height:76px}.brand img{width:46px;height:46px}.brand small{display:none}.brand b{font-size:19px}
  .hero{min-height:720px}.hero .in{bottom:200px}.bar .wrap{grid-template-columns:1fr}.bar div,.bar div+div{padding:10px 0;border-left:0}.bar div:not(:first-child){display:none}
  .hero .emb{width:110vw;left:-30%}.cred{top:112px}.hd .loc{font-size:10px;letter-spacing:.18em}
  .sec{padding:92px 0}
@@ -141,7 +141,7 @@ footer .brand{margin:0}footer .brand img{width:44px;height:44px;filter:none}foot
  .ct dl{padding:30px}
 }
 @media(max-width:560px){.pil>*{padding:18px 4px 0 0}.pil>*+*{padding-left:6px}.pil b{font-size:22px}.pil h3{font-size:10.5px;letter-spacing:0;overflow-wrap:normal}.pil p{font-size:10px;line-height:1.45;overflow-wrap:break-word}.hero h1{font-size:13vw}}
-@media(max-width:700px){.nv{gap:13px;font-size:10px;letter-spacing:.02em}.brand{gap:10px}.brand img{width:40px;height:40px}.brand b{font-size:12px;letter-spacing:.22em;margin-right:-.22em}.hd .loc{font-size:9.5px;letter-spacing:.1em}.soc a{width:34px}.hd{gap:10px}}
+@media(max-width:700px){.nv{gap:13px;font-size:10px;letter-spacing:.02em}.brand{gap:10px}.brand img{width:40px;height:40px}.brand b{font-size:14px;letter-spacing:.2em;margin-right:-.2em}.hd .loc{font-size:9.5px;letter-spacing:.1em}.soc a{width:34px}.hd{gap:10px}}
 
 @keyframes hs{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translate(0)}}
 @keyframes ft{0%{opacity:0;transform:translateY(12px)}100%{opacity:1;transform:translate(0)}}

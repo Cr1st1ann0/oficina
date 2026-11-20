@@ -37,7 +37,7 @@ export function Header() {
       <div className="wrap hd">
         <span className="loc">{locationLabel}</span>
         <a className="brand" href="#inicio" aria-label={`${company.name} — voltar ao início`}>
-          <Logo />
+          <Logo tagline={false} />
         </a>
         <div className="soc">
           <a href={company.social.instagram.url} target="_blank" rel="noopener noreferrer" aria-label={`Instagram ${company.social.instagram.handle}`} title="Instagram">
