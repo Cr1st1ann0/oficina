@@ -69,6 +69,15 @@ export function Location() {
                 </a>
               </dd>
             </div>
+            <div>
+              <dt>Google</dt>
+              <dd>
+                <a className="lk" href={company.googleReviewsUrl} target="_blank" rel="noopener noreferrer" aria-label={`Abrir a página da ${company.name} no Google`}>
+                  Nossa página no Google
+                  <ArrowUpRightIcon />
+                </a>
+              </dd>
+            </div>
           </dl>
 
           <div className="map rv">
